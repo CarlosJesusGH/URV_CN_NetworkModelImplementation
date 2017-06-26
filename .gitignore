@@ -1,0 +1,4 @@
+# exclude unimportant directories
+/docs
+/old_files
+/.idea

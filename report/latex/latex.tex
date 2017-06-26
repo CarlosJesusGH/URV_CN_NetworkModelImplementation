@@ -1,0 +1,1049 @@
+% Atom auto build latex -> Ctrl+Alt+B
+% Atom check spelling Ctrl+:
+% To use latex python scripts: cd ~/Dropbox/GeekFiles/Latex/ && source ~/Coding/venv/bin/activate
+
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage[pdftex]{graphicx}
+\usepackage{url}
+\usepackage{listings}               % Code type bash
+\usepackage{subfig}                 % Images in a row
+
+\title{CN - Activity 3 \\ \bigskip Implementation of models of complex networks}
+\author{\\ Carlos García}
+\date{May 2017}
+
+\begin{document}
+\maketitle \newpage \tableofcontents \newpage
+% ------------------------------------------------------------------------------
+\section{Project description}
+Implement generators of complex networks for, at least, two of the following models of complex networks (sorted by increasing difficulty), which must include at least one of the two last ones (BA or CM):
+    Erdös-Rényi (ER) networks, either G(N,K) or G(N,p) [score: 3]
+    Watts-Strogatz (WS) small-world model [score: 5]
+    Barabási & Albert (BA) preferential attachment model [score: 3]
+    Configuration Model (CM) [score: 5]
+
+The correction, the number and the difficulty of the implemented models will be taken into account.
+It is not allowed to use already implemented network generators such as the ones in NetworkX or Pajek. You may use libraries implementing “network” or “graph” data types, to avoid unnecessary work, but not the algorithms for the generation of networks for these models.
+
+% ------------------------------------------------------------------------------
+\section{Project decisions}
+As for prior projects, I decided working using Python, mainly because it is a language I really like and I am trying to learn more, and also because there is a lot of libraries and documentation useful for this kind of projects.
+
+Additionally, I decide working with the first three generators in the list, which are: Erdös-Rényi (ER), Watts-Strogatz (WS) and Barabási & Albert (BA).
+
+% ------------------------------------------------------------------------------
+\newpage
+\section{Erdös-Rényi (ER)}
+erdos\_renyi\_[n=100,p=0.01]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=100,p=0.01]"}}}
+  \caption{erdos\_renyi\_[n=100,p=0.01]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=100,p=0.01]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+erdos\_renyi\_[n=100,p=0.02]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=100,p=0.02]"}}}
+  \caption{erdos\_renyi\_[n=100,p=0.02]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=100,p=0.02]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+erdos\_renyi\_[n=100,p=0.03]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=100,p=0.03]"}}}
+  \caption{erdos\_renyi\_[n=100,p=0.03]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=100,p=0.03]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+erdos\_renyi\_[n=100,p=0.05]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=100,p=0.05]"}}}
+  \caption{erdos\_renyi\_[n=100,p=0.05]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=100,p=0.05]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+erdos\_renyi\_[n=100,p=0.0]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=100,p=0.0]"}}}
+  \caption{erdos\_renyi\_[n=100,p=0.0]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=100,p=0.0]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+erdos\_renyi\_[n=100,p=0.1]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=100,p=0.1]"}}}
+  \caption{erdos\_renyi\_[n=100,p=0.1]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=100,p=0.1]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+erdos\_renyi\_[n=20,p=0.01]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=20,p=0.01]"}}}
+  \caption{erdos\_renyi\_[n=20,p=0.01]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=20,p=0.01]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+erdos\_renyi\_[n=20,p=0.02]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=20,p=0.02]"}}}
+  \caption{erdos\_renyi\_[n=20,p=0.02]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=20,p=0.02]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+erdos\_renyi\_[n=20,p=0.03]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=20,p=0.03]"}}}
+  \caption{erdos\_renyi\_[n=20,p=0.03]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=20,p=0.03]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+erdos\_renyi\_[n=20,p=0.05]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=20,p=0.05]"}}}
+  \caption{erdos\_renyi\_[n=20,p=0.05]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=20,p=0.05]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+erdos\_renyi\_[n=20,p=0.0]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=20,p=0.0]"}}}
+  \caption{erdos\_renyi\_[n=20,p=0.0]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=20,p=0.0]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+erdos\_renyi\_[n=20,p=0.1]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=20,p=0.1]"}}}
+  \caption{erdos\_renyi\_[n=20,p=0.1]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=20,p=0.1]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+erdos\_renyi\_[n=50,p=0.01]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=50,p=0.01]"}}}
+  \caption{erdos\_renyi\_[n=50,p=0.01]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=50,p=0.01]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+erdos\_renyi\_[n=50,p=0.02]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=50,p=0.02]"}}}
+  \caption{erdos\_renyi\_[n=50,p=0.02]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=50,p=0.02]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+erdos\_renyi\_[n=50,p=0.03]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=50,p=0.03]"}}}
+  \caption{erdos\_renyi\_[n=50,p=0.03]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=50,p=0.03]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+erdos\_renyi\_[n=50,p=0.05]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=50,p=0.05]"}}}
+  \caption{erdos\_renyi\_[n=50,p=0.05]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=50,p=0.05]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+erdos\_renyi\_[n=50,p=0.0]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=50,p=0.0]"}}}
+  \caption{erdos\_renyi\_[n=50,p=0.0]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=50,p=0.0]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+erdos\_renyi\_[n=50,p=0.1]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=50,p=0.1]"}}}
+  \caption{erdos\_renyi\_[n=50,p=0.1]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/erdos_renyi/erdos_renyi_[n=50,p=0.1]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+% ------------------------------------------------------------------------------
+\section{Watts-Strogatz (WS)}
+watts\_strogatz\_[n=100,k=4,p=0.0]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=100,k=4,p=0.0]"}}}
+  \caption{watts\_strogatz\_[n=100,k=4,p=0.0]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=100,k=4,p=0.0]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+watts\_strogatz\_[n=100,k=4,p=0.1]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=100,k=4,p=0.1]"}}}
+  \caption{watts\_strogatz\_[n=100,k=4,p=0.1]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=100,k=4,p=0.1]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+watts\_strogatz\_[n=100,k=4,p=0.2]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=100,k=4,p=0.2]"}}}
+  \caption{watts\_strogatz\_[n=100,k=4,p=0.2]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=100,k=4,p=0.2]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+watts\_strogatz\_[n=100,k=4,p=0.5]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=100,k=4,p=0.5]"}}}
+  \caption{watts\_strogatz\_[n=100,k=4,p=0.5]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=100,k=4,p=0.5]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+watts\_strogatz\_[n=100,k=4,p=0.9]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=100,k=4,p=0.9]"}}}
+  \caption{watts\_strogatz\_[n=100,k=4,p=0.9]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=100,k=4,p=0.9]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+watts\_strogatz\_[n=100,k=4,p=1.0]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=100,k=4,p=1.0]"}}}
+  \caption{watts\_strogatz\_[n=100,k=4,p=1.0]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=100,k=4,p=1.0]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+watts\_strogatz\_[n=20,k=4,p=0.0]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=20,k=4,p=0.0]"}}}
+  \caption{watts\_strogatz\_[n=20,k=4,p=0.0]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=20,k=4,p=0.0]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+watts\_strogatz\_[n=20,k=4,p=0.1]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=20,k=4,p=0.1]"}}}
+  \caption{watts\_strogatz\_[n=20,k=4,p=0.1]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=20,k=4,p=0.1]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+watts\_strogatz\_[n=20,k=4,p=0.2]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=20,k=4,p=0.2]"}}}
+  \caption{watts\_strogatz\_[n=20,k=4,p=0.2]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=20,k=4,p=0.2]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+watts\_strogatz\_[n=20,k=4,p=0.5]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=20,k=4,p=0.5]"}}}
+  \caption{watts\_strogatz\_[n=20,k=4,p=0.5]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=20,k=4,p=0.5]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+watts\_strogatz\_[n=20,k=4,p=0.9]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=20,k=4,p=0.9]"}}}
+  \caption{watts\_strogatz\_[n=20,k=4,p=0.9]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=20,k=4,p=0.9]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+watts\_strogatz\_[n=20,k=4,p=1.0]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=20,k=4,p=1.0]"}}}
+  \caption{watts\_strogatz\_[n=20,k=4,p=1.0]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=20,k=4,p=1.0]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+watts\_strogatz\_[n=50,k=4,p=0.0]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=50,k=4,p=0.0]"}}}
+  \caption{watts\_strogatz\_[n=50,k=4,p=0.0]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=50,k=4,p=0.0]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+watts\_strogatz\_[n=50,k=4,p=0.1]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=50,k=4,p=0.1]"}}}
+  \caption{watts\_strogatz\_[n=50,k=4,p=0.1]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=50,k=4,p=0.1]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+watts\_strogatz\_[n=50,k=4,p=0.2]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=50,k=4,p=0.2]"}}}
+  \caption{watts\_strogatz\_[n=50,k=4,p=0.2]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=50,k=4,p=0.2]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+watts\_strogatz\_[n=50,k=4,p=0.5]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=50,k=4,p=0.5]"}}}
+  \caption{watts\_strogatz\_[n=50,k=4,p=0.5]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=50,k=4,p=0.5]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+watts\_strogatz\_[n=50,k=4,p=0.9]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=50,k=4,p=0.9]"}}}
+  \caption{watts\_strogatz\_[n=50,k=4,p=0.9]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=50,k=4,p=0.9]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+watts\_strogatz\_[n=50,k=4,p=1.0]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=50,k=4,p=1.0]"}}}
+  \caption{watts\_strogatz\_[n=50,k=4,p=1.0]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/watts_strogatz/watts_strogatz_[n=50,k=4,p=1.0]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+% ------------------------------------------------------------------------------
+\section{Barabási & Albert (BA)}
+barabasi\_albert\_[n=100,m=10]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=100,m=10]"}}}
+  \caption{barabasi\_albert\_[n=100,m=10]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=100,m=10]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+barabasi\_albert\_[n=100,m=1]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=100,m=1]"}}}
+  \caption{barabasi\_albert\_[n=100,m=1]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=100,m=1]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+barabasi\_albert\_[n=100,m=2]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=100,m=2]"}}}
+  \caption{barabasi\_albert\_[n=100,m=2]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=100,m=2]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+barabasi\_albert\_[n=100,m=4]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=100,m=4]"}}}
+  \caption{barabasi\_albert\_[n=100,m=4]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=100,m=4]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+barabasi\_albert\_[n=1000,m=10]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=1000,m=10]"}}}
+  \caption{barabasi\_albert\_[n=1000,m=10]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=1000,m=10]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+barabasi\_albert\_[n=1000,m=1]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=1000,m=1]"}}}
+  \caption{barabasi\_albert\_[n=1000,m=1]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=1000,m=1]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+barabasi\_albert\_[n=1000,m=2]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=1000,m=2]"}}}
+  \caption{barabasi\_albert\_[n=1000,m=2]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=1000,m=2]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+barabasi\_albert\_[n=1000,m=4]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=1000,m=4]"}}}
+  \caption{barabasi\_albert\_[n=1000,m=4]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=1000,m=4]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+barabasi\_albert\_[n=50,m=10]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=50,m=10]"}}}
+  \caption{barabasi\_albert\_[n=50,m=10]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=50,m=10]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+barabasi\_albert\_[n=50,m=1]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=50,m=1]"}}}
+  \caption{barabasi\_albert\_[n=50,m=1]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=50,m=1]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+barabasi\_albert\_[n=50,m=2]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=50,m=2]"}}}
+  \caption{barabasi\_albert\_[n=50,m=2]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=50,m=2]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+barabasi\_albert\_[n=50,m=4]
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=50,m=4]"}}}
+  \caption{barabasi\_albert\_[n=50,m=4]}
+\end{figure}
+
+
+Degree distribution
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8 \textwidth]{{{"../../output/plots/barabasi_albert/barabasi_albert_[n=50,m=4]_deg_dist"}}}
+  \caption{Degree distribution}
+\end{figure}
+
+
+\newpage
+
+
+
+% ------------------------------------------------------------------------------
+\end{document}

@@ -1,0 +1,5 @@
+\contentsline {section}{\numberline {1}Project description}{3}
+\contentsline {section}{\numberline {2}Project decisions}{3}
+\contentsline {section}{\numberline {3}Erd\IeC {\"o}s-R\IeC {\'e}nyi (ER)}{4}
+\contentsline {section}{\numberline {4}Watts-Strogatz (WS)}{22}
+\contentsline {section}{\numberline {5}Barab\IeC {\'a}si & Albert (BA)}{40}
