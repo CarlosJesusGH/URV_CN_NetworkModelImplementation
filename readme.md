@@ -1,12 +1,14 @@
 # Implementation of models of complex networks.
 
 Implement generators of complex networks for, at least, two of the following models of complex networks (sorted by increasing difficulty), which must include at least one of the two last ones (BA or CM):
+
     - Erdös-Rényi (ER) networks, either G(N,K) or G(N,p)
     - Watts-Strogatz (WS) small-world model
     - Barabási & Albert (BA) preferential attachment model
     - Configuration Model (CM)
     
 ## Include the following:
+
     -Source code in text form
     -Networks generated for the selected models, with different sizes N and for different values of the parameters of the models:
         --ER: different values of "K" for G(N,K), or of "p" for G(N,p), e.g. p=0.00, 0.01, 0.02, 0.03, 0.05, 0.1
